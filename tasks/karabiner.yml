@@ -1,0 +1,6 @@
+---
+- name: Copy Karabiner-Elements complex modifications.
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: ~/.config/karabiner/assets/complex_modifications/
+  loop: "{{ lookup('fileglob', 'assets/Karabiner-Elements/*.json', wantlist=True) }}"

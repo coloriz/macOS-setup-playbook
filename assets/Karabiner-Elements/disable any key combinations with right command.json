@@ -1,0 +1,20 @@
+{
+    "title": "Disable any key combinations with right command",
+    "rules": [
+        {
+            "description": "Disable any key combinations with right command",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "any": "key_code",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

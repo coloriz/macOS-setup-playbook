@@ -1,0 +1,56 @@
+---
+- name: Prevent .DS_Store files on network drives.
+  community.general.osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+
+- name: Show all filename extensions.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+
+- name: New Finder windows show user's home directory.
+  block:
+    - community.general.osx_defaults:
+        domain: com.apple.finder
+        key: NewWindowTarget
+        type: string
+        value: PfHm
+
+    - community.general.osx_defaults:
+        domain: com.apple.finder
+        key: NewWindowTargetPath
+        type: string
+        value: "file://{{ lookup('env', 'HOME') }}/"
+
+- name: Show all filename extensions.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+
+- name: Set the search path to the current folder.
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXDefaultSearchScope
+    type: string
+    value: SCcf
+
+- name: Show Path Bar.
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowPathbar
+    type: bool
+    value: true
+
+- name: Show Status Bar.
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowStatusBar
+    type: bool
+    value: true

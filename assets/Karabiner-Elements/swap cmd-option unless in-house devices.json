@@ -1,0 +1,127 @@
+{
+    "title": "Swap Command/Option unless in-house devices",
+    "rules": [
+        {
+            "description": "Swap left command/option to left option/command",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_option"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "device_unless",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1452
+                                }
+                            ]
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.microsoft\\.rdc\\.macos$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_option"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_command"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "device_unless",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1452
+                                }
+                            ]
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.microsoft\\.rdc\\.macos$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Swap right command/option to right option/command",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_option"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "device_unless",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1452
+                                }
+                            ]
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.microsoft\\.rdc\\.macos$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_option"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_command"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "device_unless",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1452
+                                }
+                            ]
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.microsoft\\.rdc\\.macos$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

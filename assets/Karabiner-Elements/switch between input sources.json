@@ -1,0 +1,73 @@
+{
+    "title": "Switch between input sources",
+    "rules": [
+        {
+            "description": "Use right command to toggle input source between English and Korean",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "language": "^en$"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^ko$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "language": "^ko$"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Map right command to option+spacebar",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "spacebar",
+                            "modifiers": ["left_option"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

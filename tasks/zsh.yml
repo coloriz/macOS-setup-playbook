@@ -1,0 +1,31 @@
+---
+- name: Create Antigen installation directory
+  ansible.builtin.file:
+    path: "{{ antigen_dest | expanduser | dirname }}"
+    state: directory
+
+- name: Download Antigen
+  ansible.builtin.get_url:
+    url: "{{ antigen_url }}"
+    dest: "{{ antigen_dest | expanduser }}"
+
+- name: Create .zshrc
+  block:
+    - name: Set default values
+      ansible.builtin.set_fact:
+        zshrc_custom: {}
+
+    - name: Get custom script files.
+      ansible.builtin.set_fact:
+        zshrc_custom: "{{ zshrc_custom | combine({(item | basename): lookup('file', item)}) }}"
+      loop: "{{ lookup('fileglob', 'assets/zsh/custom/*.zsh', wantlist=True) }}"
+
+    - name: Create .zshrc from template.
+      ansible.builtin.template:
+        src: assets/zsh/dotfiles/.zshrc.j2
+        dest: ~/.zshrc
+
+- name: Copy Powerlevel10k configuration file.
+  ansible.builtin.copy:
+    src: assets/zsh/dotfiles/.p10k.zsh
+    dest: ~/.p10k.zsh

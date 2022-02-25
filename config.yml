@@ -1,0 +1,23 @@
+---
+configure_keyboard: true
+initial_key_repeat: 20 # 300ms
+key_repeat: 1 # 15ms
+
+configure_finder: true
+
+configure_zsh: true
+antigen_url: https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh
+antigen_dest: ~/.antigen/antigen.zsh
+antigen_plugins:
+  - asdf
+  - command-not-found
+  - docker
+  - fzf
+  - git
+  - gitignore
+  - python
+  - zsh-users/zsh-autosuggestions
+  - zsh-users/zsh-completions
+  - zsh-users/zsh-syntax-highlighting
+
+configure_karabiner: true

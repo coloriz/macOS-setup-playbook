@@ -1,0 +1,56 @@
+---
+- name: Disable automatic capitalization.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticCapitalizationEnabled
+    type: bool
+    value: false
+    
+- name: Disable automatic dash substitution.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticDashSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Disable automatic period substitution.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticPeriodSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Disable automatic quote substitution.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticQuoteSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Disable automatic spelling correction substitution.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticSpellingCorrectionEnabled
+    type: bool
+    value: false
+
+- name: Disable automatic text completion.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticTextCompletionEnabled
+    type: bool
+    value: false
+
+- name: Configure initial key repeat delay.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: "{{ initial_key_repeat }}"
+
+- name: Configure key repeat delay.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: "{{ key_repeat }}"
