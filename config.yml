@@ -11,6 +11,7 @@ antigen_dest: ~/.antigen/antigen.zsh
 antigen_plugins:
   - asdf
   - command-not-found
+  - docker-compose
   - docker
   - fzf
   - git
