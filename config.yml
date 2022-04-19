@@ -18,6 +18,7 @@ antigen_plugins:
   - gitignore
   - poetry
   - python
+  - terraform
   - zsh-users/zsh-autosuggestions
   - zsh-users/zsh-completions
   - zsh-users/zsh-syntax-highlighting

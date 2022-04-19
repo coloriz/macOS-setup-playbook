@@ -1,3 +1,4 @@
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -22,8 +23,8 @@ brew "neovim"
 brew "nmap"
 brew "yt-dlp"
 brew "zsh"
+brew "hashicorp/tap/terraform"
 cask "aldente"
-cask "alfred"
 cask "altserver"
 cask "apparency"
 cask "appcleaner"
@@ -63,6 +64,7 @@ cask "qlstephen"
 cask "qlvideo"
 cask "quicklook-json"
 cask "quicklookase"
+cask "raycast"
 cask "rectangle"
 cask "send-anywhere"
 cask "slack"
@@ -78,6 +80,7 @@ mas "Bandizip", id: 1265704574
 mas "Hancom Office HWP 2014 VP Viewer", id: 416746898
 mas "KakaoTalk", id: 869223134
 mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
 mas "Right Click", id: 1364038646
 mas "Telegram", id: 747648890
 mas "Translate Tab", id: 458887729
