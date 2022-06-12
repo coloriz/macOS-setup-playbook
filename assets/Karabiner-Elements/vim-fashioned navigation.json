@@ -176,7 +176,7 @@
             ]
         },
         {
-            "description": "Use CapsLock to switch to 'CURSOR_MODE'",
+            "description": "Use CapsLock to switch to 'CURSOR' mode",
             "manipulators": [
                 {
                     "type": "basic",
@@ -185,14 +185,14 @@
                     },
                     "to": [
                         {
-                            "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'CURSOR_MODE'"
+                            "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'CURSOR'"
                         }
                     ]
                 }
             ]
         },
         {
-            "description": "Use CapsLock to switch to 'NORMAL_MODE'",
+            "description": "Use CapsLock to switch to 'NORMAL' mode",
             "manipulators": [
                 {
                     "type": "basic",
@@ -201,7 +201,7 @@
                     },
                     "to": [
                         {
-                            "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'NORMAL_MODE'"
+                            "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'NORMAL'"
                         }
                     ]
                 }
