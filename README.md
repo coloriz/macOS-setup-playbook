@@ -13,15 +13,17 @@ This project is highly inspired by [Jeff Geerling's mac-dev-playbook](https://gi
 ## Installation
 
 1. Clone this repository to your local drive and change working directory to there.
-2. Optionally enable DoH by double-clicking `cloudflare-https.mobileconfig`.
-3. Run `brew bundle install --verbose` to install applications listed in `Brewfile`.
-4. Run `ansible-playbook main.yml`.
-5. Run `p10k configure` to install _Meslo Nerd Font_.
-6. Configure `iTerm2`.
+1. Optionally enable DoH by double-clicking `cloudflare-https.mobileconfig`.
+1. Run `softwareupdate --all --install --force` to upgrade to latest softwares.
+1. (Apple Silicon only) Run `sudo softwareupdate --install-rosetta` to install Rosetta.
+1. Run `brew bundle install --verbose` to install applications listed in `Brewfile`.
+1. Run `ansible-playbook main.yml`.
+1. Run `p10k configure` to install _Meslo Nerd Font_.
+1. Configure `iTerm2`.
 
    1. Open `iTerm2`.
-   2. Go to `Preferences > General > Preferences`
-   3. Check `Load preferences from a custom folder or URL` and select `assets/iTerm2` directory.
+   1. Go to `Preferences > General > Preferences`
+   1. Check `Load preferences from a custom folder or URL` and select `assets/iTerm2` directory.
 
 ### Running a specific set of tasks
 
