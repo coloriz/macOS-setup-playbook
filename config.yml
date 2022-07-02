@@ -16,7 +16,6 @@ antigen_plugins:
   - fzf
   - git
   - gitignore
-  - poetry
   - python
   - terraform
   - zsh-users/zsh-autosuggestions
