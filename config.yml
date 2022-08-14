@@ -118,11 +118,11 @@ antigen_plugins:
   - docker
   - fzf
   - git
-  - gitignore
   - python
   - terraform
   - zsh-users/zsh-autosuggestions
   - zsh-users/zsh-completions
   - zsh-users/zsh-syntax-highlighting
+  - wfxr/forgit
 
 configure_karabiner: true
