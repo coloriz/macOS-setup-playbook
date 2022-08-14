@@ -14,6 +14,14 @@
     - import_tasks: tasks/finder.yml
       when: configure_finder
       tags: finder
+    
+    - import_tasks: tasks/homebrew.yml
+      when: configure_homebrew
+      tags: homebrew
+    
+    - import_tasks: tasks/mas.yml
+      when: configure_mas
+      tags: mas
 
     - import_tasks: tasks/zsh.yml
       when: configure_zsh

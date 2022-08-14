@@ -5,7 +5,8 @@ This project is highly inspired by [Jeff Geerling's mac-dev-playbook](https://gi
 ## What's in this repo?
 
 - macOS configuration
-- Homebrew bundle
+- List of Homebrew formulae, casks
+- List of Mac App Store apps
 - iTerm2 preferences
 - Karabiner-Elements rules
 - Cloudflare DoH profile (https://github.com/paulmillr/encrypted-dns)
@@ -16,9 +17,8 @@ This project is highly inspired by [Jeff Geerling's mac-dev-playbook](https://gi
 1. Optionally enable DoH by double-clicking `cloudflare-https.mobileconfig`.
 1. Run `softwareupdate --all --install --force` to upgrade to latest softwares.
 1. (Apple Silicon only) Run `sudo softwareupdate --install-rosetta` to install Rosetta.
-1. Run `brew bundle install --verbose` to install applications listed in `Brewfile`.
+1. Install Homebrew and ansible.
 1. Run `ansible-playbook main.yml`.
-1. Run `p10k configure` to install _Meslo Nerd Font_.
 1. Configure `iTerm2`.
 
    1. Open `iTerm2`.

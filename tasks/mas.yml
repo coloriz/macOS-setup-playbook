@@ -1,0 +1,5 @@
+---
+- name: Install Mac App Store apps
+  community.general.mas:
+    id: "{{ item }}"
+  loop: "{{ mas_apps }}"

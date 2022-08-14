@@ -1,0 +1,24 @@
+---
+# I know it is much more efficient to pass the list directly to the `name` option,
+# but choose to remain loop each package for the sake of clarity and debugging.
+
+- name: Tap Homebrew repositories.
+  community.general.homebrew_tap:
+    name: "{{ item }}"
+  loop: "{{ homebrew_taps }}"
+
+- name: Update Homebrew
+  community.general.homebrew:
+    update_homebrew: yes
+
+- name: Install Homebrew formulae.
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: upgraded
+  loop: "{{ homebrew_formulae }}"
+
+- name: Install Homebrew casks.
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: upgraded
+  loop: "{{ homebrew_casks }}"
