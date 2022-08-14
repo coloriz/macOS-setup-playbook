@@ -52,6 +52,7 @@ homebrew_casks:
   - datagrip
   - discord
   - docker
+  - fig
   - firefox
   - font-fira-code
   - font-meslo-lg-nerd-font
