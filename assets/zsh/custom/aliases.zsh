@@ -14,7 +14,6 @@ EXA_OPTIONS=(
     '--binary' '--group' '--time-style=long-iso' '--git'
 )
 
-alias ls="exa"
 alias l="exa --long ${EXA_OPTIONS}"
 alias ll="exa --long --all --header ${EXA_OPTIONS}"
 alias llm="exa --long --all --header --sort=modified ${EXA_OPTIONS}"
