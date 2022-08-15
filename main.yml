@@ -2,9 +2,15 @@
 - hosts: all
 
   vars_files:
-    - config.yml
+    - default.config.yml
 
   gather_facts: false
+
+  pre_tasks:
+    - name: Include playbook configuration.
+      ansible.builtin.include_vars: "{{ item }}"
+      loop: "{{ lookup('ansible.builtin.fileglob', 'config.yml') }}"
+      tags: always
 
   tasks:
     - import_tasks: tasks/keyboard.yml
