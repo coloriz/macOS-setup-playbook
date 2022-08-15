@@ -28,6 +28,7 @@ homebrew_formulae:
   - git
   - git-lfs
   - hashicorp/tap/terraform
+  - httpie
   - hyperkit
   - imagemagick
   - jq
