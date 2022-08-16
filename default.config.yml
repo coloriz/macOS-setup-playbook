@@ -14,6 +14,7 @@ homebrew_taps:
   - hashicorp/tap
 homebrew_formulae:
   - ansible
+  - asciidoctor
   - asciinema
   - asdf
   - azure-cli
