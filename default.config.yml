@@ -37,6 +37,7 @@ homebrew_formulae:
   - neovim
   - nmap
   - yt-dlp
+  - zoxide
   - zsh
 homebrew_casks:
   - aldente
