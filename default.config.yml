@@ -50,7 +50,6 @@ homebrew_casks:
   - brave-browser
   - charles
   - chromedriver
-  - datagrip
   - discord
   - docker
   - fig
@@ -62,6 +61,7 @@ homebrew_casks:
   - gureumkim
   - iina
   - insomnia
+  - intellij-idea
   - iterm2
   - karabiner-elements
   - keyboardcleantool
