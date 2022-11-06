@@ -13,8 +13,7 @@ homebrew_taps:
   - homebrew/cask-fonts
   - hashicorp/tap
 homebrew_formulae:
-  - ansible
-  - asciidoctor
+  # - ansible
   - asciinema
   - asdf
   - azure-cli
@@ -27,12 +26,14 @@ homebrew_formulae:
   - fzf
   - gh
   - git
+  - git-delta
   - git-lfs
   - hashicorp/tap/terraform
   - hashicorp/tap/vault
   - httpie
   - imagemagick
   - jq
+  - kubernetes-cli
   - lazydocker
   - mas
   - minikube
@@ -108,8 +109,8 @@ mas_apps:
   - 409203825   # Numbers
 
 configure_zsh: true
-antigen_url: https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh
-antigen_dest: ~/.antigen/antigen.zsh
+antigen_url: https://git.io/antigen
+antigen_dest: $HOME/.antigen/antigen.zsh
 antigen_plugins:
   - asdf
   - command-not-found

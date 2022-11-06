@@ -1,14 +1,4 @@
 ---
-- name: Create Antigen installation directory
-  ansible.builtin.file:
-    path: "{{ antigen_dest | expanduser | dirname }}"
-    state: directory
-
-- name: Download Antigen
-  ansible.builtin.get_url:
-    url: "{{ antigen_url }}"
-    dest: "{{ antigen_dest | expanduser }}"
-
 - name: Create .zshrc
   block:
     - name: Set default values
@@ -18,7 +8,7 @@
     - name: Get custom script files.
       ansible.builtin.set_fact:
         zshrc_custom: "{{ zshrc_custom | combine({(item | basename): lookup('file', item)}) }}"
-      loop: "{{ lookup('fileglob', 'assets/zsh/custom/*.zsh', wantlist=True) }}"
+      loop: "{{ query('fileglob', 'assets/zsh/custom/*.zsh') }}"
 
     - name: Create .zshrc from template.
       ansible.builtin.template:
