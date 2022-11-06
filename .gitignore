@@ -28,3 +28,4 @@ Temporary Items
 .apdisk
 
 config.yml
+post_tasks/*.yml
