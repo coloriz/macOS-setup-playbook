@@ -39,6 +39,7 @@ homebrew_formulae:
   - minikube
   - neovim
   - nmap
+  - rsync
   - yt-dlp
   - zoxide
   - zsh
