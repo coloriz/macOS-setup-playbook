@@ -28,4 +28,5 @@ Temporary Items
 .apdisk
 
 config.yml
-post_tasks/*.yml
+post_tasks/*
+!post_tasks/README.md
