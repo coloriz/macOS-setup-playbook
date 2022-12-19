@@ -109,22 +109,4 @@ mas_apps:
   - 458887729   # Translate Tab
   - 409203825   # Numbers
 
-configure_zsh: true
-antigen_url: https://git.io/antigen
-antigen_dest: $HOME/.antigen/antigen.zsh
-antigen_plugins:
-  - asdf
-  - command-not-found
-  - docker-compose
-  - docker
-  - fzf
-  - git
-  - python
-  - terraform
-  - zoxide
-  - zsh-users/zsh-autosuggestions
-  - zsh-users/zsh-completions
-  - zsh-users/zsh-syntax-highlighting
-  - wfxr/forgit
-
 configure_karabiner: true

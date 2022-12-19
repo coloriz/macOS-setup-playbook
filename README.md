@@ -23,11 +23,12 @@ This project is highly inspired by [Jeff Geerling's mac-dev-playbook](https://gi
 
    1. Open `iTerm2`.
    1. Go to `Preferences > General > Preferences`
-   1. Check `Load preferences from a custom folder or URL` and select `assets/iTerm2` directory.
+   1. Check `Load preferences from a custom folder or URL` and select `files/iTerm2` directory.
 
 ### Running a specific set of tasks
 
-You can filter which part of the provisioning process to run either by manually changing variables defined in `config.yml` (start with `configure_*`), or specifying a set of tags using `ansible-playbook` command's `--tags` flag. The tags available are `finder`, `karabiner`, `keyboard` and `zsh`.
+You can filter which part of the provisioning process to run either by manually changing variables defined in `config.yml` (start with `configure_*`), or specifying a set of tags using `ansible-playbook` command's `--tags` flag.
+The tags available are `finder`, `karabiner`, `keyboard`, `mas`, and `post`.
 
 ```shellscript
 ansible-playbook main.yml --tags "finder,keyboard"

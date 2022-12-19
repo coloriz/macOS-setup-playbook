@@ -29,10 +29,6 @@
       when: configure_mas
       tags: mas
 
-    - import_tasks: tasks/zsh.yml
-      when: configure_zsh
-      tags: zsh
-
     - import_tasks: tasks/karabiner.yml
       when: configure_karabiner
       tags: karabiner
