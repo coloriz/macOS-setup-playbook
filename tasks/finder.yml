@@ -27,13 +27,6 @@
         type: string
         value: "file://{{ lookup('env', 'HOME') }}/"
 
-- name: Show all filename extensions.
-  community.general.osx_defaults:
-    domain: NSGlobalDomain
-    key: AppleShowAllExtensions
-    type: bool
-    value: true
-
 - name: Set the search path to the current folder.
   community.general.osx_defaults:
     domain: com.apple.finder
