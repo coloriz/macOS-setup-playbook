@@ -17,6 +17,18 @@
       when: configure_keyboard
       tags: keyboard
 
+    - import_tasks: tasks/trackpad.yml
+      when: configure_trackpad
+      tags: trackpad
+
+    - import_tasks: tasks/menubar.yml
+      when: configure_menubar
+      tags: menubar
+
+    - import_tasks: tasks/dock.yml
+      when: configure_dock
+      tags: dock
+
     - import_tasks: tasks/finder.yml
       when: configure_finder
       tags: finder

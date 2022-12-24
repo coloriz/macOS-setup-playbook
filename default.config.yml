@@ -3,6 +3,16 @@ configure_keyboard: true
 initial_key_repeat: 20 # 300ms
 key_repeat: 1 # 15ms
 
+configure_trackpad: true
+
+configure_menubar: true
+
+configure_dock: true
+# Recommended to the multiples of 16
+dock_size: 48
+dock_magnification: true
+dock_magnification_size: 80
+
 configure_finder: true
 
 configure_homebrew: true
@@ -67,9 +77,9 @@ homebrew_casks:
   - iina
   - insomnia
   - intellij-idea
+  - iterm2
   - karabiner-elements
   - keyboardcleantool
-  # - microsoft-auto-update
   - microsoft-office
   - microsoft-teams
   - ngrok

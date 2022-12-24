@@ -1,0 +1,28 @@
+---
+- name: Show the day of the week.
+  community.general.osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: ShowDayOfWeek
+    type: bool
+    value: true
+
+- name: Show a 24-hour clock.
+  community.general.osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: Show24Hour
+    type: bool
+    value: true
+
+- name: Display the time with seconds.
+  community.general.osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: ShowSeconds
+    type: bool
+    value: true
+
+- name: Show Siri in Menu Bar.
+  community.general.osx_defaults:
+    domain: com.apple.siri
+    key: StatusMenuVisible
+    type: bool
+    value: true

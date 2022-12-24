@@ -1,0 +1,21 @@
+---
+- name: Tap to click.
+  block:
+    - community.general.osx_defaults:
+        domain: com.apple.AppleMultitouchTrackpad
+        key: Clicking
+        type: bool
+        value: true
+
+    - community.general.osx_defaults:
+        domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+        key: Clicking
+        type: bool
+        value: true
+
+- name: Enable App Exposé
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: showAppExposeGestureEnabled
+    type: bool
+    value: true

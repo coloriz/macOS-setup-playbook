@@ -5,7 +5,7 @@
     key: NSAutomaticCapitalizationEnabled
     type: bool
     value: false
-    
+
 - name: Disable automatic dash substitution.
   community.general.osx_defaults:
     domain: NSGlobalDomain
@@ -54,3 +54,17 @@
     key: KeyRepeat
     type: int
     value: "{{ key_repeat }}"
+
+- name: Enable keyboard navigation
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleKeyboardUIMode
+    type: int
+    value: 2
+
+- name: Use F1, F2, etc. keys as standard function keys.
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.keyboard.fnState
+    type: bool
+    value: true
