@@ -24,6 +24,7 @@ homebrew_taps:
   - hashicorp/tap
 homebrew_formulae:
   # - ansible
+  - ansible-lint
   - asciinema
   - asdf
   - azure-cli
@@ -52,7 +53,9 @@ homebrew_formulae:
   - minikube
   # - neovim
   - nmap
+  - pipx
   - rsync
+  - yamllint
   - yt-dlp
   - zoxide
   - zsh

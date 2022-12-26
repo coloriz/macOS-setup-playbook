@@ -27,6 +27,17 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+### JetBrains+all.patch
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+.idea/*
+
+!.idea/codeStyles
+!.idea/runConfigurations
+
+
 config.yml
 post_tasks/*
 !post_tasks/README.md
