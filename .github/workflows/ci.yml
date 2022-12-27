@@ -1,0 +1,25 @@
+---
+name: CI
+
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install test dependencies.
+        run: pip install ansible ansible-lint yamllint
+      - name: Lint code.
+        run: |
+          yamllint .
+          ansible-lint

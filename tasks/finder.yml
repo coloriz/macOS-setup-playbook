@@ -15,13 +15,15 @@
 
 - name: New Finder windows show user's home directory.
   block:
-    - community.general.osx_defaults:
+    - name: Set new Finder windows to show user's home directory.
+      community.general.osx_defaults:
         domain: com.apple.finder
         key: NewWindowTarget
         type: string
         value: PfHm
 
-    - community.general.osx_defaults:
+    - name: Set new Finder windows target path.
+      community.general.osx_defaults:
         domain: com.apple.finder
         key: NewWindowTargetPath
         type: string
