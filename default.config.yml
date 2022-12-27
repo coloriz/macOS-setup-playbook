@@ -1,7 +1,7 @@
 ---
 configure_keyboard: true
-initial_key_repeat: 20 # 300ms
-key_repeat: 1 # 15ms
+initial_key_repeat: 20  # 300ms
+key_repeat: 1  # 15ms
 
 configure_trackpad: true
 
