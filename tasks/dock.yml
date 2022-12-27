@@ -8,13 +8,15 @@
 
 - name: Configure dock magnification.
   block:
-    - community.general.osx_defaults:
+    - name: Set dock magnification flag.
+      community.general.osx_defaults:
         domain: com.apple.dock
         key: magnification
         type: bool
         value: "{{ dock_magnification }}"
 
-    - community.general.osx_defaults:
+    - name: Set dock magnification size.
+      community.general.osx_defaults:
         domain: com.apple.dock
         key: largesize
         type: float

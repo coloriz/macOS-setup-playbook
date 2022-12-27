@@ -1,5 +1,6 @@
 ---
 - name: Install Mac App Store apps
   community.general.mas:
-    id: "{{ item }}"
+    id: "{{ item }}"  # noqa args[module]
+    state: latest
   loop: "{{ mas_apps }}"
