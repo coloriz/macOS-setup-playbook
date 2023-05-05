@@ -2,14 +2,55 @@
     "title": "Vim-fashioned navigation",
     "rules": [
         {
-            "description": "Use cmd+y/o to move the cursor by words",
+            "description": "Set caps_lock_down variable",
             "manipulators": [
                 {
                     "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "caps_lock_down",
+                                "value": true
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "caps_lock_down",
+                                "value": false
+                            }
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "caps_lock"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Use caps_lock+y/o to move the cursor by words",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "y",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -22,10 +63,16 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "o",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -39,14 +86,20 @@
             ]
         },
         {
-            "description": "Use cmd+u/i to move to line head, tail",
+            "description": "Use caps_lock+u/i to move to line head, tail",
             "manipulators": [
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "u",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -59,10 +112,16 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "i",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -76,14 +135,20 @@
             ]
         },
         {
-            "description": "Use cmd+p/; to page up down",
+            "description": "Use caps_lock+p/; to page up down",
             "manipulators": [
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "p",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -95,10 +160,16 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "semicolon",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -111,14 +182,20 @@
             ]
         },
         {
-            "description": "Use cmd+h/j/k/l to left down up right",
+            "description": "Use caps_lock+h/j/k/l to left down up right",
             "manipulators": [
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "h",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -130,10 +207,16 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "j",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -145,10 +228,16 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "k",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
@@ -160,48 +249,22 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "caps_lock_down",
+                            "value": true
+                        }
+                    ],
                     "from": {
                         "key_code": "l",
                         "modifiers": {
-                            "mandatory": ["left_command"],
                             "optional": ["any"]
                         }
                     },
                     "to": [
                         {
                             "key_code": "right_arrow"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "Use CapsLock to switch to 'CURSOR' mode",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "caps_lock"
-                    },
-                    "to": [
-                        {
-                            "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'CURSOR'"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "Use CapsLock to switch to 'NORMAL' mode",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "caps_lock"
-                    },
-                    "to": [
-                        {
-                            "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'NORMAL'"
                         }
                     ]
                 }
