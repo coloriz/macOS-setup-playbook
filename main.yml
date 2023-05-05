@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Configure host.
+  hosts: all
 
   vars_files:
     - default.config.yml
@@ -13,38 +14,39 @@
       tags: always
 
   tasks:
-    - import_tasks: tasks/keyboard.yml
+    - ansible.builtin.import_tasks: tasks/keyboard.yml
       when: configure_keyboard
       tags: keyboard
 
-    - import_tasks: tasks/menubar.yml
+    - ansible.builtin.import_tasks: tasks/menubar.yml
       when: configure_menubar
       tags: menubar
 
-    - import_tasks: tasks/dock.yml
+    - ansible.builtin.import_tasks: tasks/dock.yml
       when: configure_dock
       tags: dock
 
-    - import_tasks: tasks/finder.yml
+    - ansible.builtin.import_tasks: tasks/finder.yml
       when: configure_finder
       tags: finder
 
-    - import_tasks: tasks/homebrew.yml
+    - ansible.builtin.import_tasks: tasks/homebrew.yml
       when: configure_homebrew
       tags: homebrew
 
-    - import_tasks: tasks/mas.yml
+    - ansible.builtin.import_tasks: tasks/mas.yml
       when: configure_mas
       tags: mas
 
-    - import_tasks: tasks/karabiner.yml
+    - ansible.builtin.import_tasks: tasks/karabiner.yml
       when: configure_karabiner
       tags: karabiner
 
-    - block:
+    - name: Run post-provision task files in a block.
+      tags: post
+      block:
         - name: Run configured post-provision ansible task files.
           ansible.builtin.include_tasks: "{{ outer_item }}"
           loop: "{{ query('fileglob', 'post_tasks/*.yml') | sort }}"
           loop_control:
             loop_var: outer_item
-      tags: post
