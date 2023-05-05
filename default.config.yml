@@ -54,6 +54,7 @@ homebrew_formulae:
   # - neovim
   - nmap
   - pipx
+  - protobuf
   - rsync
   - yamllint
   - yt-dlp
@@ -69,12 +70,12 @@ homebrew_casks:
   - brave-browser
   - charles
   - chromedriver
+  - devtoys
   - discord
   - docker
   - firefox
   - font-fira-code
   - font-meslo-lg-nerd-font
-  - github
   - google-chrome
   - gureumkim
   - iina
