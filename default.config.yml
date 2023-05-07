@@ -42,6 +42,7 @@ homebrew_formulae:
   - hashicorp/tap/terraform
   - hashicorp/tap/vault
   - helix
+  - helm
   - httpie
   - hugo
   - imagemagick

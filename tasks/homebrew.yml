@@ -14,11 +14,11 @@
 - name: Install Homebrew formulae.
   community.general.homebrew:
     name: "{{ item }}"
-    state: upgraded
+    state: present
   loop: "{{ homebrew_formulae }}"
 
 - name: Install Homebrew casks.
   community.general.homebrew_cask:
     name: "{{ item }}"
-    state: upgraded
+    state: present
   loop: "{{ homebrew_casks }}"
