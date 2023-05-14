@@ -1,5 +1,5 @@
 {
-    "title": "Swap Command/Option on Windows",
+    "title": "Windows compatibility",
     "rules": [
         {
             "description": "Swap left command/option to left option/command on Windows",
