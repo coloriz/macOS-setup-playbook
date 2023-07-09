@@ -17,99 +17,101 @@ configure_finder: true
 
 configure_homebrew: true
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
+  - bufbuild/buf
+  - hashicorp/tap
   - homebrew/cask-drivers
   - homebrew/cask-fonts
-  - hashicorp/tap
 homebrew_formulae:
-  # - ansible
-  - ansible-lint
-  - asciinema
-  - asdf
-  - azure-cli
-  - bat
-  - bfg
-  - cmake
-  - cowsay
-  - exa
-  - ffmpeg
-  - fzf
-  - gh
-  - git
-  - git-delta
-  - git-lfs
-  - hashicorp/tap/terraform
-  - hashicorp/tap/vault
-  - helix
-  - helm
-  - httpie
-  - hugo
-  - imagemagick
-  - jq
-  - kubernetes-cli
-  - lazydocker
-  # - libpq
-  - mas
-  - minikube
-  # - neovim
-  - nmap
-  - pipx
-  - protobuf
-  - rsync
-  - yamllint
-  - yt-dlp
-  - zoxide
-  - zsh
+#  - name: ansible
+  - name: ansible-lint
+  - name: asciinema
+  - name: asdf
+  - name: azure-cli
+  - name: bat
+  - name: bfg
+  - name: bufbuild/buf/buf
+  - name: cmake
+  - name: cowsay
+  - name: dive
+  - name: exa
+  - name: ffmpeg
+  - name: fzf
+  - name: gh
+  - name: git
+  - name: git-delta
+  - name: git-lfs
+  - name: hashicorp/tap/terraform
+  - name: hashicorp/tap/vault
+  - name: helix
+  - name: helm
+  - name: httpie
+  - name: hugo
+  - name: imagemagick
+  - name: jq
+  - name: kubernetes-cli
+  - name: lazydocker
+  - name: mas
+  - name: minikube
+  - name: neovim
+  - name: nmap
+  - name: pipx
+  - name: protobuf
+  - name: ranger
+  - name: rsync
+  - name: yamllint
+  - name: yt-dlp
+  - name: zoxide
+  - name: zsh
 homebrew_casks:
-  - aldente
-  - apparency
-  - appcleaner
-  - balenaetcher
-  - binance
-  - blackhole-16ch
-  - brave-browser
-  - charles
-  - chromedriver
-  - devtoys
-  - discord
-  - docker
-  - firefox
-  - font-fira-code
-  - font-meslo-lg-nerd-font
-  - google-chrome
-  - gureumkim
-  - iina
-  - insomnia
-  - intellij-idea
-  - iterm2
-  - karabiner-elements
-  - keyboardcleantool
-  - microsoft-office
-  - microsoft-teams
-  - mouse-fix
-  - ngrok
-  - notion
-  - openinterminal
-  - openvpn-connect
-  - parallels
-  - parsec
-  - qbittorrent
-  - qlmarkdown
-  - qlstephen
-  - qlvideo
-  - quicklook-json
-  - raycast
-  - rectangle
-  - redisinsight
-  - send-anywhere
-  - slack
-  - suspicious-package
-  - visual-studio-code
-  - vlc
-  - warp
-  - wireshark
-  - zoom
+  - name: aldente
+  - name: apparency
+  - name: appcleaner
+  - name: balenaetcher
+  - name: binance
+  - name: blackhole-16ch
+  - name: brave-browser
+  - name: charles
+  - name: chromedriver
+    install_options: [no-quarantine]
+  - name: devtoys
+  - name: discord
+  - name: docker
+  - name: firefox
+  - name: font-fira-code
+  - name: font-meslo-lg-nerd-font
+  - name: google-chrome
+  - name: gureumkim
+  - name: iina
+  - name: insomnia
+  - name: intellij-idea
+  - name: iterm2
+  - name: karabiner-elements
+  - name: keyboardcleantool
+  - name: microsoft-office
+  - name: microsoft-teams
+  - name: mouse-fix
+  - name: ngrok
+  - name: notion
+  - name: openinterminal
+  - name: openvpn-connect
+  - name: parallels
+  - name: parsec
+  - name: qbittorrent
+  - name: qlmarkdown
+  - name: qlvideo
+  - name: raycast
+  - name: rectangle
+  - name: redisinsight
+  - name: send-anywhere
+  - name: slack
+  - name: suspicious-package
+  - name: syntax-highlight
+    install_options: [no-quarantine]
+  - name: visual-studio-code
+  - name: vlc
+  - name: warp
+  - name: wireshark
+  - name: zoom
 
 configure_mas: true
 mas_apps:
