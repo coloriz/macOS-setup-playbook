@@ -13,12 +13,14 @@
 
 - name: Install Homebrew formulae.
   community.general.homebrew:
-    name: "{{ item }}"
-    state: present
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    install_options: "{{ item.install_options | default(omit) }}"
   loop: "{{ homebrew_formulae }}"
 
 - name: Install Homebrew casks.
   community.general.homebrew_cask:
-    name: "{{ item }}"
-    state: present
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    install_options: "{{ item.install_options | default(omit) }}"
   loop: "{{ homebrew_casks }}"
