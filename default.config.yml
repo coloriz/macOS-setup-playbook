@@ -40,6 +40,7 @@ homebrew_formulae:
   - name: git
   - name: git-delta
   - name: git-lfs
+  - name: hashicorp/tap/packer
   - name: hashicorp/tap/terraform
   - name: hashicorp/tap/vault
   - name: helix

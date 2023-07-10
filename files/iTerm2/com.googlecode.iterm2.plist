@@ -713,6 +713,8 @@
 	<integer>0</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>MinimalTabStyleOutlineStrength</key>
+	<real>0.20000000298023224</real>
 	<key>NeverWarnAboutShortLivedSessions_F88809DB-8E46-4D0C-9706-1F3574238E87</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_F88809DB-8E46-4D0C-9706-1F3574238E87_selection</key>
@@ -1998,7 +2000,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.10000000000000001</real>
+			<real>0.20000000000000001</real>
 			<key>Unicode Normalization</key>
 			<integer>1</integer>
 			<key>Unlimited Scrollback</key>
@@ -3136,6 +3138,8 @@
 			<string>/Users/njw</string>
 		</dict>
 	</array>
+	<key>OnlyWhenMoreTabs</key>
+	<true/>
 	<key>OpenFileInNewWindows</key>
 	<true/>
 	<key>PMPrintingExpandedStateForPrint2</key>
