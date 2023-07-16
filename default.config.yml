@@ -19,7 +19,6 @@ configure_homebrew: true
 homebrew_taps:
   - bufbuild/buf
   - hashicorp/tap
-  - homebrew/cask-drivers
   - homebrew/cask-fonts
 homebrew_formulae:
   # - name: ansible
