@@ -81,6 +81,7 @@ homebrew_casks:
   - name: font-meslo-lg-nerd-font
   - name: google-chrome
   - name: gureumkim
+  - name: heynote
   - name: iina
   - name: insomnia
   - name: intellij-idea
@@ -89,13 +90,14 @@ homebrew_casks:
   - name: keyboardcleantool
   - name: microsoft-office
   - name: microsoft-teams
-  - name: mouse-fix
+  - name: mac-mouse-fix
   - name: ngrok
   - name: notion
   - name: openinterminal
   - name: openvpn-connect
   - name: parallels
   - name: parsec
+  - name: postman
   - name: qbittorrent
   - name: qlmarkdown
   - name: qlvideo
@@ -121,6 +123,7 @@ mas_apps:
   - 1295203466  # Microsoft Remote Desktop
   - 1364038646  # Right Click
   - 1265704574  # Bandizip
+  - 1463298887  # Userscripts-Mac-App
   - 416746898   # Hancom Office HWP 2014 VP Viewer
   - 869223134   # KakaoTalk
   - 747648890   # Telegram
