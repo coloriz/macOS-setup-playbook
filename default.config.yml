@@ -19,10 +19,10 @@ configure_homebrew: true
 homebrew_taps:
   - bufbuild/buf
   - hashicorp/tap
-  - homebrew/cask-fonts
+  - homebrew/cask-drivers
 homebrew_formulae:
   # - name: ansible
-  - name: ansible-lint
+  # - name: ansible-lint
   - name: asciinema
   - name: asdf
   - name: azure-cli
@@ -30,9 +30,9 @@ homebrew_formulae:
   - name: bfg
   - name: bufbuild/buf/buf
   - name: cmake
-  - name: cowsay
+  # - name: cowsay
   - name: dive
-  - name: exa
+  - name: eza
   - name: ffmpeg
   - name: fzf
   - name: gh
@@ -44,7 +44,7 @@ homebrew_formulae:
   - name: hashicorp/tap/vault
   - name: helix
   - name: helm
-  - name: httpie
+  # - name: httpie
   - name: hugo
   - name: imagemagick
   - name: jq
