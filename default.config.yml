@@ -20,8 +20,6 @@ homebrew_taps:
   - bufbuild/buf
   - hashicorp/tap
 homebrew_formulae:
-  # - name: ansible
-  # - name: ansible-lint
   - name: asciinema
   - name: asdf
   - name: azure-cli
@@ -29,7 +27,6 @@ homebrew_formulae:
   - name: bfg
   - name: bufbuild/buf/buf
   - name: cmake
-  # - name: cowsay
   - name: dive
   - name: eza
   - name: ffmpeg
@@ -43,19 +40,21 @@ homebrew_formulae:
   - name: hashicorp/tap/vault
   - name: helix
   - name: helm
-  # - name: httpie
   - name: hugo
   - name: imagemagick
+  - name: iperf3
   - name: jq
   - name: kubernetes-cli
   - name: lazydocker
   - name: mas
   - name: minikube
+  - name: monolith
   - name: neovim
   - name: nmap
   - name: pipx
   - name: protobuf
   - name: ranger
+  - name: ripgrep
   - name: rsync
   - name: yamllint
   - name: yt-dlp
@@ -66,12 +65,13 @@ homebrew_casks:
   - name: apparency
   - name: appcleaner
   - name: balenaetcher
-  - name: binance
   - name: blackhole-16ch
   - name: brave-browser
   - name: charles
   - name: chromedriver
     install_options: [no-quarantine]
+  - name: cyberduck
+  - name: deepl
   - name: devtoys
   - name: discord
   - name: docker
@@ -81,6 +81,7 @@ homebrew_casks:
   - name: google-chrome
   - name: gureumkim
   - name: heynote
+  - name: hiddenbar
   - name: iina
   - name: insomnia
   - name: intellij-idea
@@ -101,17 +102,17 @@ homebrew_casks:
   - name: qlmarkdown
   - name: qlvideo
   - name: raycast
-  - name: rectangle
   - name: redisinsight
   - name: send-anywhere
   - name: slack
   - name: suspicious-package
   - name: syntax-highlight
     install_options: [no-quarantine]
+  - name: tailscale
   - name: visual-studio-code
-  - name: vlc
   - name: warp
   - name: wireshark
+  - name: xquartz
   - name: zoom
 
 configure_mas: true
