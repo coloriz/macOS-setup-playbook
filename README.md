@@ -14,19 +14,19 @@ This project is highly inspired by [Jeff Geerling's mac-dev-playbook](https://gi
 ## Installation
 
 1. Go to System Settings > Privacy & Security > Developer Tools, and Add the preferred terminal application to the list.
-1. Install [Homebrew](https://brew.sh).
-1. Install ansible and git by running `brew install ansible git`.
-1. Clone this repository to your local drive and change working directory to there.
-1. (Optional) Copy post tasks to `post_tasks` directory.
-1. (Optional) Enable DoH by double-clicking `cloudflare-https.mobileconfig`.
-1. Run `softwareupdate --all --install --force` to upgrade to the latest software.
-1. (Apple Silicon only) Run `softwareupdate --install-rosetta` to install Rosetta.
-1. Run `ansible-playbook main.yml`.
-1. Configure `iTerm2`.
+2. Install [Homebrew](https://brew.sh).
+3. Install ansible and git by running `brew install ansible git`.
+4. Clone this repository to your local drive and change working directory to there.
+5. (Optional) Copy post tasks to `post_tasks` directory.
+6. (Optional) Enable DoH by double-clicking `cloudflare-https.mobileconfig`.
+7. Run `softwareupdate --all --install --force` to upgrade to the latest software.
+8. (Apple Silicon only) Run `softwareupdate --install-rosetta` to install Rosetta.
+9. Run `ansible-playbook main.yml`.
+10. Configure `iTerm2`.
 
-   1. Open `iTerm2`.
-   1. Go to `Preferences > General > Preferences`
-   1. Check `Load preferences from a custom folder or URL` and select `files/iTerm2` directory.
+    1. Open `iTerm2`.
+    2. Go to `Preferences > General > Preferences`
+    3. Check `Load preferences from a custom folder or URL` and select `files/iTerm2` directory.
 
 ### Running a specific set of tasks
 
