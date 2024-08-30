@@ -119,13 +119,16 @@ mas_apps:
   - 1440147259  # AdGuard for Safari
   - 497799835   # Xcode
   - 1333542190  # 1Password 7
+  - 409183694   # Keynote
   - 1295203466  # Microsoft Remote Desktop
   - 1364038646  # Right Click
+  - 1451685025  # WireGuard
   - 1265704574  # Bandizip
   - 1463298887  # Userscripts-Mac-App
   - 416746898   # Hancom Office HWP 2014 VP Viewer
   - 869223134   # KakaoTalk
   - 747648890   # Telegram
+  - 1352778147  # Bitwarden
   - 937984704   # Amphetamine
   - 409203825   # Numbers
 
