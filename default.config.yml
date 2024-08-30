@@ -95,7 +95,6 @@ homebrew_casks:
   - name: notion
   - name: openinterminal
   - name: openvpn-connect
-  - name: parallels
   - name: parsec
   - name: postman
   - name: qbittorrent
