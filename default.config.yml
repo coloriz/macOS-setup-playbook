@@ -127,7 +127,6 @@ mas_apps:
   - 869223134   # KakaoTalk
   - 747648890   # Telegram
   - 937984704   # Amphetamine
-  - 458887729   # Translate Tab
   - 409203825   # Numbers
 
 configure_karabiner: true
