@@ -15,6 +15,33 @@
                     }
                 }
             ]
+        },
+        {
+            "description": "Disable Cmd + Q in Safari",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "q",
+                        "modifiers": {
+                            "mandatory": ["command"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "com.apple.Safari"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
